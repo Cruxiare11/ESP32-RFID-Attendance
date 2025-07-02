@@ -258,6 +258,9 @@ void loop() {
 
   byteArrayToHexString(mfrc522.uid.uidByte, mfrc522.uid.size, UID_Str);
 
+  Serial.print("Card UID: ");
+  Serial.println(UID_Str);
+
   mfrc522.PICC_HaltA();
   mfrc522.PCD_StopCrypto1();
 
